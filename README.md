@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/laaksom/SoftwareTesting/badge.svg)](https://coveralls.io/github/laaksom/SoftwareTesting)
+
 # Student template
 
 ## Purpose of this repository
