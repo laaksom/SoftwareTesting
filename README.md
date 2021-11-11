@@ -1,5 +1,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/laaksom/SoftwareTesting/badge.svg)](https://coveralls.io/github/laaksom/SoftwareTesting)
 
+[![Build Status](https://app.travis-ci.com/laaksom/SoftwareTesting.svg?branch=main)](https://app.travis-ci.com/laaksom/SoftwareTesting)
+
 # Student template
 
 ## Purpose of this repository
