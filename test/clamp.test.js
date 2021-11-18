@@ -19,8 +19,12 @@ describe("Clamp", () => {
         var result = clamp(-7,-5,-10);
         expect(result).to.equal(-7);
     });
-    it("Works when number is already at the limit of the range", () => {
+    it("Works when number is already at the lower limit of the range", () => {
         var result = clamp(-12.2,-5,-12.2);
         expect(result).to.equal(-12.2);
+    });
+    it("Works when number is already at the upper limit of the range", () => {
+        var result = clamp(-5,-5,-12.2);
+        expect(result).to.equal(-5);
     });
 });
