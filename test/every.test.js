@@ -47,4 +47,24 @@ describe("Every", () => {
         var result = every(array, Boolean);
         expect(result).to.be.true;
     });
+    it("Works when predicate function returns other than true/false", () => {
+        function getUnclearValues(number) {
+            if (number == 0) {
+                return undefined;
+            }
+            else if(number == 1) {
+                return null;
+            }
+            else if (number == 2) {
+                return 'yes';
+            }
+            else if ( number == 3) {
+                return '';
+            }
+            return true
+        }
+        var array = [0, 1, 2, 3, 4];
+        var result = every(array, getUnclearValues);
+        expect(result).to.be.false;
+    });
 });
