@@ -18,7 +18,7 @@ describe("EndsWith", () => {
         var result = endswith(string, ' ', 8);
         expect(result).to.be.true;
     });
-    it("Finds the last characters up to given position", () => {
+    it("Finds last characters up to given position", () => {
         var string = 'abcdefg hijklmn op';
         var result = endswith(string, 'efg ', 8);
         expect(result).to.be.true;

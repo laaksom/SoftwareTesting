@@ -16,12 +16,18 @@ describe("At", () => {
         expect(result[1]).to.equal(2);
         expect(result.length).to.equal(2);
     });
-    it("Finds item in a complex datastructure", () => {
+    it("Finds items in a complex datastructure", () => {
         var object = { 'a': [{ 'a1': 1, 'a2': ['A1', 'A2', 'A3', {'AA': ['AA1', -12.32, 3.14]}]}], 'b': [2, 'B'] };
         var result = at(object, [ 'a[0].a2[3].AA[2]', 'b[0]', 'a[0].a2[2]' ] );
         expect(result[0]).to.equal(3.14);
         expect(result[1]).to.equal(2);
         expect(result[2]).to.equal('A3');
+    });
+    it("Finds a single item in a complex datastructure", () => {
+        var object = { 'a': [{ 'a1': 1, 'a2': ['A1', 'A2', 'A3', {'AA': ['AA1', -12.32, 3.14]}]}], 'b': [2, 'B'] };
+        var result = at(object, [ 'a[0].a2[2]' ] );
+        expect(result.length).to.equal(1);
+        expect(result[0]).to.equal('A3');
     });
     it("Handles empty object", () => {
         var object = [];
