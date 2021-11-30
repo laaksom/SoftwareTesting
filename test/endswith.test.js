@@ -48,4 +48,9 @@ describe("EndsWith", () => {
         var result = endswith(string, 'abcdefg hijklmn opqrstu');
         expect(result).to.be.false;
     });
+    it("Position to search up to is negative", () => {
+        var string = 'abcdefg hijklmn op';
+        var result = endswith(string, 'abcdefg hijklmn op', -3);
+        expect(result).to.be.false;
+    });
 });

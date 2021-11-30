@@ -52,6 +52,11 @@ describe("Slice", () => {
         expect(result.length).to.equal(0);
         // If array is empty, returns empty array.
     });
+    it("Handles null parameter in the place of array", () => {
+        var array = null;
+        var result = slice(array, 12,23);
+        expect(result.length).to.equal(0);
+    });
     it("Handles indexes outside array", () => {
         var array = [0];
         var result = slice(array, 0,23);
@@ -69,6 +74,11 @@ describe("Slice", () => {
         expect(result.length).to.equal(2);
         expect(result[0]).to.equal(4);
         expect(result[1]).to.equal(5);
+    });
+    it("Handles erroneous negative indexes", () => {
+        var array = [0, 1, 2, 3, 4, 5, 6];
+        var result = slice(array, -11, -12);
+        expect(result.length).to.equal(0);
     });
 
 });

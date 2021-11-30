@@ -67,4 +67,9 @@ describe("Every", () => {
         var result = every(array, getUnclearValues);
         expect(result).to.be.false;
     });
+    it("Works with null array", () => {
+        var array = null;
+        var result = every(array, Boolean);
+        expect(result).to.be.true;
+    });
 });

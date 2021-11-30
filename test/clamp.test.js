@@ -47,4 +47,9 @@ describe("Clamp", () => {
         var result = clamp(1.0, 3.14, 0);
         expect(result).to.equal(1.0);
     });
+    it("Handles nonsense values", () => {
+        var result = clamp('A', null, undefined);
+        expect(isNaN(result)).to.be.true;
+    });
+
 });
