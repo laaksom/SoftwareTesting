@@ -15,4 +15,10 @@ describe("Divide", () => {
     it("Dividing two negative numbers", () => {
         expect(divide(-1,-2)).to.equal(0,5)
     });
+    it("Dividing zero with negative number", () => {
+        expect(divide(0,-2)).to.equal(0)
+    });
+    it("Dividing negative number with zero", () => {
+        expect(divide(-2,0)).to.be.NaN
+    });
 });
