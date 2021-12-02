@@ -12,13 +12,13 @@ describe("Filter", () => {
     });
     it("Filter empty array", () => {
         let users = []
-        expect(filter(users, ({ active }) => active)).to.deep.equal([[]])
+        expect(filter(users, ({ active }) => active)).to.deep.equal([])
     });
     it("The predicate doesn't match with the array", () => {
         let users = [
            { 'user': 'barney', 'active': true },
            { 'user': 'fred',   'active': false }
         ]
-        expect(filter(users, ({ online }) => online)).to.deep.equal([[]])
+        expect(filter(users, ({ online }) => online)).to.deep.equal([])
     });
 });
